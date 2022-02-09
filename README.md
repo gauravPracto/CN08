@@ -33,6 +33,12 @@ node index.js
 check on localhost - 4000
 ```
 
+Config.json
+
+```
+add the CLIENT_ID , CLIENT_SECRET , ENCRYPTION_KEY in config.js
+```
+
 ## Usage <a name = "usage"></a>
 
 Happy Coding
