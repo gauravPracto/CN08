@@ -1,0 +1,72 @@
+<!-- views/success.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Github OAuth</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <!-- load bulma css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- load fontawesome -->
+    <style>
+      .heading {
+        margin: auto;
+        width: 700px;
+        font-size: 50px;
+      }
+      .flex {
+        width: 100%;
+        justify-content: center;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      body {
+        padding-top: 70px;
+      }
+
+      .card {
+        margin: 10px;
+      }
+      .center {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: 47%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">Jedi Classroom Git O-Auth</div>
+    <div class="flex">
+      <%if((current+1)*4>userData.length){ current=4}%> <%for (var
+      i=current*0;i<(current+1)*4;i++){%>
+      <div class="card" style="width: 18rem">
+        <img
+          class="card-img-top"
+          src="<%=userData[0].actor.avatar_url%>"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%=userData[i].actor.login%></li>
+            <li class="list-group-item"><%=userData[i].type%></li>
+            <li class="list-group-item"><%=userData[i].created_at%></li>
+            <li class="list-group-item"><%=userData[i].repo.name%></li>
+          </ul>
+        </div>
+      </div>
+      <%}%>
+    </div>
+    <div class="center">
+      <a href="http://localhost:2400/activity">
+        <button class="btn btn-primary">load more</button>
+      </a>
+    </div>
+  </body>
+</html>
