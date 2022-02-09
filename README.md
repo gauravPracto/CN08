@@ -15,10 +15,8 @@ added a git o auth get the activities
 
 ### Prerequisites
 
-node js
-
 ```
-Give examples
+node js
 ```
 
 ### Installing
