@@ -30,7 +30,7 @@ git clone https://github.com/gauravPracto/CN08.git
 cd CN08
 npm install
 node index.js
-check on localhost - 4000
+check on localhost - 2400
 ```
 
 Config.json
